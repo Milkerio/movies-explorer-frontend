@@ -1,0 +1,44 @@
+.navigation{
+  display: flex;
+  justify-content: space-between;
+  max-height: 38px;
+  padding: 21px 70px;
+}
+.navigation__logo{
+  height: 38px;
+  width: 38px;
+  transition: .5s;
+}
+.navigation__auth{
+  display: flex;
+  align-items: center;
+}
+.navigation__reg{
+  color: white;
+  padding-right: 30px;
+}
+.navigation__log{
+  color: black;
+  background-color: #3DDC84;
+  border-radius: 3px;
+  padding: 8px 20px;
+}
+.navigation__link{
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+}
+@media (max-width: 776px) {
+  .navigation{
+    padding: 18px 30px;
+  }
+}
+@media (max-width: 330px) {
+  .navigation{
+    padding: 18px 14px;
+  }
+  .navigation__link{
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,20 @@
+.project{
+  background-color: #073042;
+}
+.project__container{
+
+}
+.project__title{
+  margin: 0;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 58px;
+}
+.project__subtitle{
+  opacity: 0.5;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
