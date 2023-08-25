@@ -1,9 +1,13 @@
 import AboutProject from './AboutProject/AboutProject';
+import Promo from './Promo/Promo';
+import Techs from './Techs/Techs';
 
 function Main() {
   return(
     <main>
-    <AboutProject />
+      <Promo />
+      <AboutProject />
+      <Techs />
     </main>
   )
 }

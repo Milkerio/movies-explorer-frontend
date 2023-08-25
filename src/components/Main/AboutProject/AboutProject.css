@@ -1,20 +1,109 @@
 .project{
-  background-color: #073042;
+  padding: 110px 70px;
 }
 .project__container{
-
+  display: flex;
+  padding: 70px 0 110px;
 }
-.project__title{
-  margin: 0;
-  font-size: 50px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 58px;
+.project__cell{
+  max-width: 550px;
 }
-.project__subtitle{
-  opacity: 0.5;
-  font-size: 13px;
+.project__container_title{
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  letter-spacing: -0.8px;
+  margin: 0 0 26px;
+}
+.project__container_subtitle{
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0;
+}
+.project__weeks{
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+.project__weeks_text{
+  display: flex;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background-color: #303030;
+  height: 36px;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+}
+.project__weeks_text:first-of-type{
+  background-color: #3DDC84;
+  color: #000000;
+}
+.project__weeks_description{
+  color: #8B8B8B;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 17px;
+  text-align: center;
+  margin: 14px 0 0;
+}
+@media (max-width: 776px){
+  .project{
+    padding: 90px 50px;
+  }
+  .project__container{
+    padding-bottom: 93px;
+  }
+  .project__cell{
+    max-width: 319px;
+  }
+  .project__container_title{
+    margin-bottom: 22px;
+  }
+  .project__container_subtitle{
+    line-height: 18px;
+  }
+  .project__weeks_description{
+    font-weight: 400;
+  }
+}
+@media (max-width: 330px){
+  .project{
+    padding: 70px 18px;
+  }
+  .project__container{
+    padding: 60px 0;
+    flex-direction: column;
+  }
+  .project__cell{
+    max-width: 284px;
+  }
+  .project__container_title{
+    font-size: 18px;
+    letter-spacing: -0.72px;
+    margin-bottom: 16px;
+  }
+  .project__cell:first-of-type{
+    margin-bottom: 56px;
+  }
+  .project__container_subtitle{
+    font-size: 11px;
+    line-height: 16px;
+  }
+  .project__weeks{
+    grid-template-columns: 1fr 2fr;
+  }
+  .project__weeks_text{
+    font-size: 11px;
+  }
+  .project__weeks_description{
+    font-size: 11px;
+    line-height: normal;
+    margin-top: 10px;
+  }
 }
