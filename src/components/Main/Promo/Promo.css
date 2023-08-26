@@ -36,6 +36,11 @@
 .promo__container_main{
   padding-right: 190px;
 }
+@media (max-width: 890px){
+  .promo__container_main{
+    padding-right: 0px;
+  }
+}
 @media (max-width: 776px){
   .promo{
     padding: 0 44px 76px;
