@@ -1,6 +1,6 @@
 import '../../Button/Button.css';
 import './Promo.css';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-scroll';
 import logoMain from '../../../images/logoMain.svg';
 
 function Promo() {
@@ -14,7 +14,7 @@ function Promo() {
           <p className='promo__subtitle'>
             Листайте ниже, чтобы узнать больше про этот проект и его создателя.
           </p>
-          <Link className='button promo__link'>
+          <Link className='button promo__link' to='about' smooth={true}>
             Узнать больше
           </Link>
         </div>

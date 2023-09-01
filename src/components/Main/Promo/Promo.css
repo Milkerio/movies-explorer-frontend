@@ -1,6 +1,6 @@
 .promo{
   background-color: #073042;
-  padding: 0 70px 85px;
+  padding: 75px 70px 85px;
 }
 .promo__container{
   padding: 0;
@@ -35,6 +35,7 @@
 }
 .promo__container_main{
   padding-right: 190px;
+  width: 55%;
 }
 @media (max-width: 890px){
   .promo__container_main{
@@ -43,7 +44,7 @@
 }
 @media (max-width: 776px){
   .promo{
-    padding: 0 44px 76px;
+    padding: 140px 44px 76px;
   }
   .promo__container{
     padding: 0;
@@ -69,7 +70,7 @@
 }
 @media (max-width: 330px){
   .promo{
-    padding: 0 10px 30px;
+    padding: 70px 10px 30px;
   }
   .promo__container{
     padding: 0;

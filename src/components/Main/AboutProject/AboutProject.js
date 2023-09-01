@@ -4,7 +4,7 @@ import '../Line/Line.css';
 
 function AboutProject() {
   return(
-    <section className="project">
+    <section className="project" id='about'>
       <h2 className='title'>
         О проекте
       </h2>

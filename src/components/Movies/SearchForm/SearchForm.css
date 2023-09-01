@@ -1,0 +1,122 @@
+.movies__search{
+  padding: 70px 0 10px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.movies__search-form{
+  display: flex;
+  justify-content: space-between;
+  border-radius: 8px;
+  border: 1.5px solid rgba(170, 170, 170, .2);
+  padding: 10px 10px;
+  align-items: center;
+}
+.movies__search-form-input{
+  width: 82%;
+  background-color: inherit;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 0;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  padding: 15px;
+  padding-right: 0;
+}
+.movies__search-form-button{
+  border-radius: 5px;
+  background: #4285F4;
+  color: white;
+  border: none;
+  width: 100px;
+  height: 52px;
+  padding: 0;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+}
+.movies__checkbox-container{
+  padding-top: 26px;
+  border-bottom: 1px solid rgba(170, 170, 170, 0.2);
+  padding-bottom: 43px;
+  display: flex;
+}
+.movies__checkbox{
+  appearance: none;
+  background-color: white;
+  width: 36px;
+  height: 20px;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+}
+.movies__checkbox::after {
+  position: absolute;
+  height: 9px;
+  width: 9px;
+  top: 6px;
+  left: 6px;
+  border-radius: 50%;
+  content: '';
+  background-color: black;
+  transform: translate(0px);
+  transition: .2s;
+}
+.movies__checkbox:checked {
+  background-color: #3DDC84;
+}
+.movies__checkbox:checked::after {
+  background-color: #FFFFFF;
+  transform: translate(16px);
+  transition: .2s;
+}
+.movies__checkbox-text{
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  margin-left: 14px;
+}
+@media (max-width: 780px){
+  .movies__search{
+    padding: 70px 0px 10px;
+  }
+  .movies__checkbox-container{
+    padding-bottom: 51px;
+  }
+}
+@media (max-width: 390px){
+  .movies__search{
+    padding: 70px 4px 10px;
+    width: auto;
+  }
+  .movies__search-form{
+    padding: 6px;
+  }
+  .movies__search-form-input{
+    font-size: 16px;
+    line-height: 16px;
+    padding: 14px 6px;
+    padding-right: 0;
+    width: 71%;
+  }
+  .movies__search-form-button{
+    height: 44px;
+    width: 80px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .movies__checkbox-container{
+    padding: 30px 0 63px;
+  }
+  .movies__checkbox-text{
+    font-size: 11px;
+    line-height: 18px;
+  }
+}

@@ -1,15 +1,7 @@
 .header{
   background-color: #073042;
   height: 74px;
-  padding-bottom: 75px;
 }
-@media (max-width: 776px){
-  .header{
-    padding-bottom: 140px;
-  }
-}
-@media (max-width: 330px){
-  .header{
-    padding-bottom: 70px;
-  }
+.header_black {
+  background-color: #202020;
 }

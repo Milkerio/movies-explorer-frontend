@@ -1,8 +1,8 @@
 .button{
-  transition: .5s;
+  transition: .3s;
   text-decoration: none;
 }
 .button:hover{
   cursor: pointer;
-  opacity: .5;
+  opacity: .6;
 } 
