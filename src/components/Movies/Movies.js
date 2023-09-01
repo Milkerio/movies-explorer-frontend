@@ -7,11 +7,11 @@ function Movies() {
   return(
     <>
       <Header />
-      <section className="movies">
+      <main className="movies">
         <SearchForm />
         <MoviesCardList />
         <button className="button movies__button" type='button'>Ещё</button>
-      </section>
+      </main>
     </>
   )
 }

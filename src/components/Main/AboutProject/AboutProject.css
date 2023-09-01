@@ -6,7 +6,11 @@
   padding: 70px 0 110px;
 }
 .project__cell{
-  max-width: 550px;
+  width: 50%;
+  margin-right: 40px;
+}
+.project__cell:last-of-type{
+  margin-right: 0;
 }
 .project__container_title{
   font-size: 20px;
@@ -61,12 +65,17 @@
   }
   .project__cell{
     max-width: 319px;
+    margin-left: 30px;
+  }
+  .project__cell:first-of-type{
+    margin: 0;
   }
   .project__container_title{
     margin-bottom: 22px;
   }
   .project__container_subtitle{
     line-height: 18px;
+    font-size: 12px;
   }
   .project__weeks_description{
     font-weight: 400;

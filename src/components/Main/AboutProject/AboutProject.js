@@ -1,6 +1,5 @@
 import './AboutProject.css';
 import '../Title/Title.css';
-import '../Line/Line.css';
 
 function AboutProject() {
   return(
@@ -8,12 +7,11 @@ function AboutProject() {
       <h2 className='title'>
         О проекте
       </h2>
-      <div className='line' />
       <div className='project__container'>
         <div className='project__cell'>
-          <p className='project__container_title'>
+          <h3 className='project__container_title'>
             Дипломный проект включал 5 этапов
-          </p>
+          </h3>
           <p className='project__container_subtitle'>
             Составление плана, работу над бэкендом, вёрстку, добавление функциональности и финальные доработки.
           </p>

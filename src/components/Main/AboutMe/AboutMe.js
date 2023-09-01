@@ -1,5 +1,4 @@
 import '../Title/Title.css';
-import '../Line/Line.css';
 import '../../Button/Button.css';
 import './AboutMe.css';
 //import photo from '../../../images/student.png';
@@ -11,7 +10,6 @@ function AboutMe() {
   return(
     <section className='student'>
       <h2 className='title'>Студент</h2>
-      <div className='line' />
       <div className='student__container'>
         <h3 className='student__name'>Виталий</h3>
         <h4 className='student__job'>Фронтенд-разработчик, 30 лет</h4>

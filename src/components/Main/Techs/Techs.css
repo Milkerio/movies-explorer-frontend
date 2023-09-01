@@ -45,12 +45,16 @@
   border-radius: 10px;
   background: #303030;
   height: 60px;
-  width: 90px;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   letter-spacing: -0.56px;
+}
+@media (max-width: 850px){
+  .techs__list{
+    grid-template-columns: repeat(7, max(70px));
+  }
 }
 @media (max-width: 776px){
   .techs{

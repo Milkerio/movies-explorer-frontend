@@ -1,9 +1,10 @@
 import './Form.css';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import logo from '../../images/logo.svg';
 import '../Button/Button.css';
 
 function Form({ title, children, buttonText, spanText, linkText, linkPath }) {
+  const location = useLocation();
   return(
     <form className="form">
       <Link className='form__link' to={'/'}>
@@ -13,7 +14,7 @@ function Form({ title, children, buttonText, spanText, linkText, linkPath }) {
         {title}
       </h1>
       {children}
-      <button className='button form__button' type='submit'>
+      <button className={`button form__button ${location.pathname === '/signin' ? 'form__button-login' : ''}`} type='submit'>
         {buttonText}
       </button>
       <span className='form__text'>

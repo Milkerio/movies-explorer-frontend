@@ -55,6 +55,10 @@
   cursor: pointer;
   display: inline-block;
   outline: none;
+  transition: .2s;
+}
+.movies__checkbox:hover{
+  opacity: .9;
 }
 .movies__checkbox::after {
   position: absolute;

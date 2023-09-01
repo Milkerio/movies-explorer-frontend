@@ -81,4 +81,7 @@
   .burger__profile-link{
     padding-bottom: 48px;
   }
+  .burger__overlay{
+    display: none;
+  }
 }

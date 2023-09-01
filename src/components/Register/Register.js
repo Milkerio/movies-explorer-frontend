@@ -3,7 +3,7 @@ import Form from '../Form/Form';
 
 function Register() {
   return(
-    <section className='register'>
+    <main className='register'>
       <Form
         title='Добро пожаловать!'
         buttonText='Зарегистрироваться'
@@ -21,7 +21,7 @@ function Register() {
         <input className='form__input form__input-error' id='password' type='password' placeholder='Введите пароль' minLength='4' maxLength='16' required />
         <span className='form__span'>Что-то пошло не так...</span>
       </Form>
-    </section>
+    </main>
   )
 }
 export default Register;

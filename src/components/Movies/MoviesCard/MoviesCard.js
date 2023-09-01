@@ -19,7 +19,7 @@ function MoviesCard({ movie }) {
         <h2 className="movie__name">{movie.name}</h2>
         <p className="movie__duration">{movie.duration}</p>
       </div>
-      <img className="movie__picture" alt="Постер фильма" src={movie.src} />
+      <img className="movie__picture" alt={`Постер фильма ${movie.name}`} src={movie.src} />
       <button className={likeMovieButton} type='button' onClick={likeCard}>{isLiked ? null : buttonText}</button>
     </li>
   )

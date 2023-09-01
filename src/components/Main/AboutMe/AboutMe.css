@@ -6,7 +6,7 @@
   flex-direction: column;
   position: relative;
   margin-top: 66px;
-  min-height: 327px;
+  max-height: 327px;
 }
 .student__name{
   font-size: 50px;
@@ -40,7 +40,6 @@
   color: inherit;
 }
 .student__photo{
-  position: absolute;
   top: 0;
   right: 0;
   width: 270px;
@@ -48,6 +47,7 @@
   text-align: center;
   border-radius: 10px;
   object-fit: cover;
+  position: absolute;
 }
 @media (max-width: 776px){
   .student{

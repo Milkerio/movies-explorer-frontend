@@ -11,11 +11,11 @@ function NavigationProfile() {
     setIsBurgerOpen(!isBurgerOpen);
   }
   return(
-    <>
+    <nav className='nav'>
       {!isBurgerOpen ? (
-        <button className='button navigation__burger' onClick={toggleBurger} />
+        <button className='button navigation__burger' onClick={toggleBurger} type='button' />
       ) : (
-        <button className='button navigation__burger_close' onClick={toggleBurger} />
+        <button className='button navigation__burger_close' onClick={toggleBurger} type='button' />
       )}
       <Burger isOpen={isBurgerOpen} />
       <div className='navigation__links'>
@@ -32,7 +32,7 @@ function NavigationProfile() {
           <img className='navigation__profile-icon' alt='Иконка профиля' src={icon} />
         </div>
       </Link>
-    </>
+    </nav>
   )
 }
 export default NavigationProfile;

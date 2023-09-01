@@ -8,13 +8,14 @@ function SearchForm() {
     <section className="movies__search">
       <form className="movies__search-form">
         <input className="movies__search-form-input" placeholder='Фильм' />
-        <button className="button movies__search-form-button">
+        <button className="button movies__search-form-button" type='button'>
           Поиск
         </button>
       </form>
       <div className="movies__checkbox-container">
         <input
           className="movies__checkbox"
+          required
           type='checkbox'
           checked={checkbox}
           onChange={() => { setCheckbox(!checkbox) }}

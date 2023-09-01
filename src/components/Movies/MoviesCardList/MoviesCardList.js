@@ -9,17 +9,19 @@ function MoviesCardList() {
     <section className="movies__container">
       {location.pathname === '/movies' ? (
         <ul className="movies__list">
-          {cards.map((movie) => (
+          {cards.map((movie, i) => (
             <MoviesCard
               movie={movie}
+              key={i}
             />  
           ))}
         </ul>
       ) : (
         <ul className="movies__list">
-          {saveCards.map((movie) => (
+          {saveCards.map((movie, i) => (
             <MoviesCard
               movie={movie}
+              key={i}
             />  
           ))}
         </ul>

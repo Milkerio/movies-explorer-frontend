@@ -19,7 +19,7 @@
     padding: 15px 30px;
     max-height: 44px;  }
 }
-@media (max-width: 330px) {
+@media (max-width: 380px) {
   .navigation{
     padding: 18px 14px;
   }

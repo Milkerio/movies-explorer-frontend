@@ -7,6 +7,10 @@
 }
 .form__link{
   align-self: flex-start;
+  transition: .2s;
+}
+.form__link:hover{
+  opacity: .8;
 }
 .form__logo{
   object-fit: cover;
@@ -27,6 +31,13 @@
   height: 45px;
   padding: 0;
   margin: 128px 0 16px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.form__button-login{
+  margin-top: 197px;
 }
 .form__text{
   color: #8B8B8B;
@@ -96,7 +107,14 @@
     font-weight: 500;
   }
   .form__button{
-    margin: 303px 0 14px;
+    margin: 216px 0 14px;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .form__button-login{
+    margin-top: 285px;
   }
   .form__text{
     font-size: 12px;

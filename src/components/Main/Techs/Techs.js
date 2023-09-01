@@ -1,6 +1,5 @@
 import './Techs.css';
 import '../Title/Title.css';
-import '../Line/Line.css';
 
 function Techs() {
   return(
@@ -8,7 +7,6 @@ function Techs() {
       <h2 className="title">
       Технологии
       </h2>
-      <div className='line' />
       <div className='techs__text_container'>
         <h3 className='techs__text_title'>
           7 технологий

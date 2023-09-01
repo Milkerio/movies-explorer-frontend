@@ -5,7 +5,7 @@ import '../Button/Button.css';
 function PageNotFound() {
   const navigate = useNavigate();
   return(
-    <div className='not-found'>
+    <main className='not-found'>
       <h1 className='not-found__title'>
         404
       </h1>
@@ -15,7 +15,7 @@ function PageNotFound() {
       <button type='button' className='button not-found__button' onClick={() => navigate(-1)}>
         Назад
       </button>
-    </div>
+    </main>
   )
 }
 export default PageNotFound;
