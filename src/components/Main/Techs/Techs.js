@@ -7,11 +7,11 @@ function Techs() {
       <h2 className="title">
       Технологии
       </h2>
-      <div className='techs__text_container'>
-        <h3 className='techs__text_title'>
+      <div className='techs__text-container'>
+        <h3 className='techs__text-title'>
           7 технологий
         </h3>
-        <p className='techs__text_subtitle'>
+        <p className='techs__text-subtitle'>
           На курсе веб-разработки мы освоили технологии, которые применили в дипломном проекте.
         </p>
       </div>

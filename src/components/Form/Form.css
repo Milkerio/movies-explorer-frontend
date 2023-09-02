@@ -47,7 +47,7 @@
   font-weight: 400;
   line-height: normal;
 }
-.form__text_link{
+.form__text-link{
   color: #4285F4;
   text-align: center;
   font-size: 14px;
@@ -119,7 +119,7 @@
   .form__text{
     font-size: 12px;
   }
-  .form__text_link{
+  .form__text-link{
     font-size: 12px;
   }
 }

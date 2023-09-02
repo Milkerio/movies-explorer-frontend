@@ -19,16 +19,16 @@ function NavigationProfile() {
       )}
       <Burger isOpen={isBurgerOpen} />
       <div className='navigation__links'>
-        <Link to='/movies' className='button navigation__link_profile'>
+        <Link to='/movies' className='button navigation__link-profile'>
           Фильмы
         </Link>
-        <Link to='/saved-movies' className='button navigation__link_profile'>
+        <Link to='/saved-movies' className='button navigation__link-profile'>
           Сохраненные фильмы
         </Link>
       </div>
       <Link to='/profile' className='button navigation__profile-link'>
         Аккаунт
-        <div className='navigation__profile-icon_container'>
+        <div className='navigation__profile-container'>
           <img className='navigation__profile-icon' alt='Иконка профиля' src={icon} />
         </div>
       </Link>

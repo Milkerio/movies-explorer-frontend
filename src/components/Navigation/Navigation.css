@@ -1,6 +1,7 @@
 .navigation{
   display: flex;
   justify-content: space-between;
+  align-items: center;
   max-height: 38px;
   padding: 21px 70px;
 }
@@ -16,11 +17,15 @@
 
 @media (max-width: 800px) {
   .navigation{
-    padding: 15px 30px;
+    padding: 18px 30px;
     max-height: 44px;  }
 }
 @media (max-width: 380px) {
   .navigation{
     padding: 18px 14px;
+  }
+  .navigation_padding{
+    padding: 17px 28px;
+    padding-right: 0;
   }
 }

@@ -2,13 +2,14 @@
   position: fixed;
   width: 67.8%;
   height: 100%;
-  z-index: -1;
+  display: none;
   top: 0;
   right: 0;
   background-color: #202020;
 }
 .burger_active{
   z-index: 3;
+  display: block;
 }
 .burger__overlay{
   position: fixed;
@@ -58,7 +59,7 @@
   line-height: 16px;
   padding-bottom: 92px;
 }
-.burger__profile-icon_container{
+.burger__profile-container{
   display: flex;
   width: 30px;
   height: 30px;

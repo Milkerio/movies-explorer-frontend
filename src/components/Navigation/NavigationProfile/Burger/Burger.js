@@ -21,7 +21,7 @@ function Burger({ isOpen }) {
         </nav>
         <Link className='button burger__profile-link' to='/profile'>
           Аккаунт
-          <div className='burger__profile-icon_container'>
+          <div className='burger__profile-container'>
             <img className='burger__profile-icon' src={icon} alt='Иконка профиля' />
           </div>
         </Link>

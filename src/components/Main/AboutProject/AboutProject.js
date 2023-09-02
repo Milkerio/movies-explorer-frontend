@@ -9,27 +9,27 @@ function AboutProject() {
       </h2>
       <div className='project__container'>
         <div className='project__cell'>
-          <h3 className='project__container_title'>
+          <h3 className='project__cell-title'>
             Дипломный проект включал 5 этапов
           </h3>
-          <p className='project__container_subtitle'>
+          <p className='project__cell-subtitle'>
             Составление плана, работу над бэкендом, вёрстку, добавление функциональности и финальные доработки.
           </p>
         </div>
         <div className='project__cell'>
-          <p className='project__container_title'>
+          <p className='project__cell-title'>
             На выполнение диплома ушло 5 недель
           </p>
-          <p className='project__container_subtitle'>
+          <p className='project__cell-subtitle'>
             У каждого этапа был мягкий и жёсткий дедлайн, которые нужно было соблюдать, чтобы успешно защититься.
           </p>
         </div> 
       </div>
       <div className='project__weeks'>
-        <p className='project__weeks_text'>1 неделя</p>
-        <p className='project__weeks_text'>4 недели</p>
-        <p className='project__weeks_description'>Back-end</p>
-        <p className='project__weeks_description'>Front-end</p>
+        <p className='project__weeks-text'>1 неделя</p>
+        <p className='project__weeks-text'>4 недели</p>
+        <p className='project__weeks-description'>Back-end</p>
+        <p className='project__weeks-description'>Front-end</p>
       </div>
     </section>
   )

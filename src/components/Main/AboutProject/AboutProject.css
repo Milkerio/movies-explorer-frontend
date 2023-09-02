@@ -12,7 +12,7 @@
 .project__cell:last-of-type{
   margin-right: 0;
 }
-.project__container_title{
+.project__cell-title{
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -20,7 +20,7 @@
   letter-spacing: -0.8px;
   margin: 0 0 26px;
 }
-.project__container_subtitle{
+.project__cell-subtitle{
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -31,7 +31,7 @@
   display: grid;
   grid-template-columns: 1fr 4fr;
 }
-.project__weeks_text{
+.project__weeks-text{
   display: flex;
   font-size: 14px;
   font-style: normal;
@@ -43,11 +43,11 @@
   align-items: center;
   justify-content: center;
 }
-.project__weeks_text:first-of-type{
+.project__weeks-text:first-of-type{
   background-color: #3DDC84;
   color: #000000;
 }
-.project__weeks_description{
+.project__weeks-description{
   color: #8B8B8B;
   font-size: 14px;
   font-style: normal;
@@ -56,7 +56,7 @@
   text-align: center;
   margin: 14px 0 0;
 }
-@media (max-width: 776px){
+@media (max-width: 800px){
   .project{
     padding: 90px 50px;
   }
@@ -70,18 +70,18 @@
   .project__cell:first-of-type{
     margin: 0;
   }
-  .project__container_title{
+  .project__cell-title{
     margin-bottom: 22px;
   }
-  .project__container_subtitle{
+  .project__cell-subtitle{
     line-height: 18px;
     font-size: 12px;
   }
-  .project__weeks_description{
+  .project__weeks-description{
     font-weight: 400;
   }
 }
-@media (max-width: 330px){
+@media (max-width: 360px){
   .project{
     padding: 70px 18px;
   }
@@ -90,9 +90,10 @@
     flex-direction: column;
   }
   .project__cell{
-    max-width: 284px;
+    width: 100%;
+    margin-left: 0;
   }
-  .project__container_title{
+  .project__cell-title{
     font-size: 18px;
     letter-spacing: -0.72px;
     margin-bottom: 16px;
@@ -100,17 +101,17 @@
   .project__cell:first-of-type{
     margin-bottom: 56px;
   }
-  .project__container_subtitle{
+  .project__cell-subtitle{
     font-size: 11px;
     line-height: 16px;
   }
   .project__weeks{
     grid-template-columns: 1fr 2fr;
   }
-  .project__weeks_text{
+  .project__weeks-text{
     font-size: 11px;
   }
-  .project__weeks_description{
+  .project__weeks-description{
     font-size: 11px;
     line-height: normal;
     margin-top: 10px;

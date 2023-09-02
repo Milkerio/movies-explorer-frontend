@@ -3,11 +3,11 @@ import { useState } from "react";
 import '../../Button/Button.css';
 
 function SearchForm() {
-  const [checkbox, setCheckbox] = useState();
+  const [checkbox, setCheckbox] = useState(false);
   return(
     <section className="movies__search">
       <form className="movies__search-form">
-        <input className="movies__search-form-input" placeholder='Фильм' />
+        <input className="movies__search-form-input" placeholder='Фильм' required />
         <button className="button movies__search-form-button" type='button'>
           Поиск
         </button>

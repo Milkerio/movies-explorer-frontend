@@ -14,7 +14,7 @@ const Profile = () => {
         <div className='profile__container'>
           <h1 className='profile__title'>Привет, {name}!</h1>
           <form className='profile__form'>
-            <label className='profile__input-container'>
+            <div className='profile__input-container'>
               <p className='profile__input-text'>Имя</p>
               <input
                 className='profile__input'
@@ -25,8 +25,8 @@ const Profile = () => {
                 minLength='2'
                 maxLength='30'
               />
-            </label>
-            <label className='profile__input-container'>
+            </div>
+            <div className='profile__input-container'>
               <p className='profile__input-text'>E-mail</p>
               <input
                 className='profile__input'
@@ -35,7 +35,7 @@ const Profile = () => {
                 //value={email}
                 onChange={(evt) => setEmail(evt.target.value)}
               />
-            </label>
+            </div>
             <div className='profile__buttons'>
               <button className='button profile__button-submit' type='submit'>
                 Редактировать

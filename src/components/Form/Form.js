@@ -19,7 +19,7 @@ function Form({ title, children, buttonText, spanText, linkText, linkPath }) {
       </button>
       <span className='form__text'>
         {spanText}
-        <Link className='button form__text_link' to={linkPath}>
+        <Link className='button form__text-link' to={linkPath}>
           {linkText}
         </Link>
       </span>

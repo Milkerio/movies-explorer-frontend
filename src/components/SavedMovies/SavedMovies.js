@@ -8,8 +8,10 @@ function SavedMovies() {
     <>
       <Header />
       <main className="saved-movies">
-        <SearchForm />
-        <MoviesCardList />
+        <section className="movies">
+          <SearchForm />
+          <MoviesCardList />
+        </section>
       </main>
     </>
   )

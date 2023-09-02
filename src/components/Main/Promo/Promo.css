@@ -33,12 +33,12 @@
   border: 1px solid rgba(255, 255, 255, 0.6);
   padding: 10px 20px;
 }
-.promo__container_main{
+.promo__text-container{
   padding-right: 190px;
   width: 55%;
 }
 @media (max-width: 890px){
-  .promo__container_main{
+  .promo__text-container{
     padding-right: 0px;
     width: 100%;
   }
@@ -58,7 +58,7 @@
     font-size: 40px;
     line-height: 50px;
   }
-  .promo__container_main{
+  .promo__text-container{
     padding: 0;
     display: flex;
     flex-direction: column;

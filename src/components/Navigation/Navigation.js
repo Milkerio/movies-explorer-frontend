@@ -7,8 +7,11 @@ import '../Button/Button.css';
 
 function Navigation() {
   const location = useLocation();
+  const navigation_padding = (
+    location.pathname === '/movies' ? 'navigation_padding' : ''
+  )
   return(
-    <nav className="navigation">
+    <nav className={`navigation ${navigation_padding}`}>
       <Link to='/'>
         <img className='button navigation__logo' src={logo} alt="Логотип сайта" />
       </Link>
