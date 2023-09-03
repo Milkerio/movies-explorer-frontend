@@ -24,14 +24,12 @@
 }
 .profile__input-container{
   display: flex;
+  
+}
+.profile__input-container:first-of-type{
   border-bottom: 1px solid #424242;
   padding-bottom: 16px;
   margin-bottom: 17px;
-}
-.profile__input-container:last-of-type{
-  border-bottom: none;
-  padding: 0;
-  margin: 0;
 }
 .profile__input-text{
   font-size: 11px;
@@ -86,7 +84,7 @@
   font-style: normal;
   line-height: normal;
 }
-@media (max-width: 780px){
+@media (max-width: 800px){
   .profile__container{
     padding-top: 236px;
   }
@@ -97,7 +95,7 @@
     padding-top: 210px;
   }
 }
-@media (max-width: 380px){
+@media (max-width: 400px){
   .profile__container{
     padding-top: 70px;
   }

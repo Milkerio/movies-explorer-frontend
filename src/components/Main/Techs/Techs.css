@@ -53,12 +53,12 @@
 }
 @media (max-width: 850px){
   .techs__list{
-    grid-template-columns: repeat(7, max(70px));
+    grid-template-columns: repeat(7, max(84px));
   }
 }
-@media (max-width: 776px){
+@media (max-width: 800px){
   .techs{
-    padding: 90px 60px;
+    padding: 90px 50px;
   }
   .techs__text-container{
     padding: 80px 0 83px;
@@ -83,9 +83,9 @@
     grid-template-columns: repeat(2, 86px);
   }
 }
-@media (max-width: 330px){
+@media (max-width: 400px){
   .techs{
-    padding: 70px 14px;
+    padding: 70px 18px;
   }
   .techs__text-container{
     padding: 60px 0 50px;

@@ -46,7 +46,7 @@
   border: none;
   padding: 0;
 }
-.navigation__burger_close{
+.navigation__burger-close{
   background: url(../../../images/burgerClose.svg);
   border: none;
   background-position: center;
@@ -68,6 +68,10 @@
   .navigation__burger{
     display: block;
   }
+  .navigation__burger-close{
+    top: 27px;
+    right: 27px;
+  }
 }
 @media (max-width: 400px){
   .navigation__burger{
@@ -75,8 +79,8 @@
     height: 43px;
     width: 40px;
   }
-  .navigation__burger_close{
-    top: 13px;
-    right: 13px;
+  .navigation__burger-close{
+    top: 17px;
+    right: 17px;
   }
 }

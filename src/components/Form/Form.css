@@ -91,6 +91,14 @@
 .form__input:focus{
   border-color: #4285F4;
 }
+@media (max-width: 800px){
+  .form{
+    padding-top: 232px
+  }
+  .form__title{
+    margin-top: 38px;
+  }
+}
 @media (max-width: 420px){
   .form{
     padding-top: 56px;
@@ -101,7 +109,7 @@
   }
   .form__title{
     text-align: center;
-    margin: 50px 0 80px;
+    margin: 48px 0 80px;
   }
   .form__input{
     font-weight: 500;

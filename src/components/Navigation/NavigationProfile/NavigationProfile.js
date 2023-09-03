@@ -15,7 +15,7 @@ function NavigationProfile() {
       {!isBurgerOpen ? (
         <button className='button navigation__burger' onClick={toggleBurger} type='button' />
       ) : (
-        <button className='button navigation__burger_close' onClick={toggleBurger} type='button' />
+        <button className='button navigation__burger-close' onClick={toggleBurger} type='button' />
       )}
       <Burger isOpen={isBurgerOpen} />
       <div className='navigation__links'>

@@ -4,6 +4,9 @@
   justify-content: center;
   padding-bottom: 10px;
 }
+.movies__container-save{
+  padding-bottom: 148px;
+}
 .movies__list{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -21,8 +24,11 @@
     column-gap: 24px;
     row-gap: 35px;
   }
+  .movies__container-save{
+    padding-bottom: 88px;
+  }
 }
-@media (max-width: 390px){
+@media (max-width: 400px){
   .movies__list{
     grid-template-columns: 1fr;
     row-gap: 16px;
@@ -30,5 +36,8 @@
   }
   .movies__container{
     padding-top: 40px;
+  }
+  .movies__container-save{
+    padding-bottom: 30px;
   }
 }

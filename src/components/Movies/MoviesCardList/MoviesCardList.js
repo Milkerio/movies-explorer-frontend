@@ -5,8 +5,11 @@ import MoviesCard from "../MoviesCard/MoviesCard";
 
 function MoviesCardList() {
   const location = useLocation();
+  const containerSave = (
+    location.pathname === '/saved-movies' ? 'movies__container-save' : ''
+  )
   return(
-    <section className="movies__container">
+    <section className={`movies__container ${containerSave}`}>
       {location.pathname === '/movies' ? (
         <ul className="movies__list">
           {cards.map((movie, i) => (

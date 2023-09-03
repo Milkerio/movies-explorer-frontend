@@ -81,7 +81,7 @@
     font-weight: 400;
   }
 }
-@media (max-width: 360px){
+@media (max-width: 400px){
   .project{
     padding: 70px 18px;
   }
@@ -99,7 +99,7 @@
     margin-bottom: 16px;
   }
   .project__cell:first-of-type{
-    margin-bottom: 56px;
+    margin-bottom: 58px;
   }
   .project__cell-subtitle{
     font-size: 11px;

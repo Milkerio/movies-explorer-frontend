@@ -56,15 +56,21 @@
   background-repeat: no-repeat;
   object-fit: cover;
 }
-@media (max-width: 776px){
+@media (max-width: 800px){
   .movie__info{
     gap: 12px;
   }
   .movie__picture{
     height: 190px;
   }
+  .movie__name{
+    padding-left: 18px;
+  }
+  .movie__duration{
+    padding-right: 18px;
+  }
 }
-@media (max-width: 336px){
+@media (max-width: 400px){
   .movie{
     padding: 14px 0;
     gap: 14px;
@@ -74,9 +80,11 @@
   }
   .movie__name{
     font-size: 12px;
+    padding-left: 14px;
   }
   .movie__duration{
     font-size: 10px;
+    padding-right: 14px;
   }
   .movie__picture{
     height: 168px;

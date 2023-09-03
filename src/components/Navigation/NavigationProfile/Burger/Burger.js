@@ -16,7 +16,7 @@ function Burger({ isOpen }) {
             Фильмы
           </NavLink>
           <NavLink className='button burger__link' to='/saved-movies'>
-            Сохраненные фильмы
+            Сохранённые фильмы
           </NavLink>
         </nav>
         <Link className='button burger__profile-link' to='/profile'>

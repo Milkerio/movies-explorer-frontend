@@ -40,12 +40,12 @@
   font-weight: 400;
   line-height: normal;
 }
-@media (max-width: 776px){
+@media (max-width: 800px){
   .footer{
     padding: 80px 30px 20px;
   }
 }
-@media (max-width: 330px){
+@media (max-width: 400px){
   .footer{
     padding-left: 10px;
     padding-right: 10px;
@@ -59,13 +59,13 @@
     font-size: 12px;
   }
   .footer__container{
-    margin-top: 30px;
+    margin-top: 28px;
     flex-direction: column-reverse;
     row-gap: 30px;
   }
   .footer__links{
     flex-direction: column;
-    row-gap: 12px;
+    row-gap: 8px;
   }
   .footer__link{
     font-size: 12px;

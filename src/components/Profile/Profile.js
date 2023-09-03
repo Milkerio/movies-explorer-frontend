@@ -10,42 +10,44 @@ const Profile = () => {
   return (
     <>
       <Header />
-      <main className='profile'>
-        <div className='profile__container'>
-          <h1 className='profile__title'>Привет, {name}!</h1>
-          <form className='profile__form'>
-            <div className='profile__input-container'>
-              <p className='profile__input-text'>Имя</p>
-              <input
-                className='profile__input'
-                type='text'
-                placeholder={name}
-                //value={name}
-                onChange={(evt) => setName(evt.target.value)}
-                minLength='2'
-                maxLength='30'
-              />
-            </div>
-            <div className='profile__input-container'>
-              <p className='profile__input-text'>E-mail</p>
-              <input
-                className='profile__input'
-                type='text'
-                placeholder={email}
-                //value={email}
-                onChange={(evt) => setEmail(evt.target.value)}
-              />
-            </div>
-            <div className='profile__buttons'>
-              <button className='button profile__button-submit' type='submit'>
-                Редактировать
-              </button>
-              <Link className='button profile__button-exit' to='/signin'>
-                Выйти из аккаунта
-              </Link>
-            </div>
-          </form>
-        </div>
+      <main>
+        <section className='profile'>
+          <div className='profile__container'>
+            <h1 className='profile__title'>Привет, {name}!</h1>
+            <form className='profile__form'>
+              <div className='profile__input-container'>
+                <p className='profile__input-text'>Имя</p>
+                <input
+                  className='profile__input'
+                  type='text'
+                  placeholder={name}
+                  //value={name}
+                  onChange={(evt) => setName(evt.target.value)}
+                  minLength='2'
+                  maxLength='30'
+                />
+              </div>
+              <div className='profile__input-container'>
+                <p className='profile__input-text'>E-mail</p>
+                <input
+                  className='profile__input'
+                  type='text'
+                  placeholder={email}
+                  //value={email}
+                  onChange={(evt) => setEmail(evt.target.value)}
+                />
+              </div>
+              <div className='profile__buttons'>
+                <button className='button profile__button-submit' type='submit'>
+                  Редактировать
+                </button>
+                <Link className='button profile__button-exit' to='/signin'>
+                  Выйти из аккаунта
+                </Link>
+              </div>
+            </form>
+          </div>
+        </section>
       </main>
     </>
   );
