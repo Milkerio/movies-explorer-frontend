@@ -50,11 +50,12 @@
     align-items: center;
     text-align: center;
   }
-}
-@media (max-width: 890px){
   .promo__text-container{
     padding-right: 0px;
     min-width: 100%;
+  }
+  .promo__subtitle{
+    margin: 36px auto 153px;
   }
 }
 @media (max-width: 800px){

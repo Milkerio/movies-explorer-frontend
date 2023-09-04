@@ -3,10 +3,9 @@
 }
 .student__container{
   display: flex;
-  flex-direction: column;
   margin-top: 66px;
   min-height: 327px;
-  max-height: 330px;
+  max-height: 100%;
   flex-wrap: wrap;
   width: 100%;
 }
@@ -54,11 +53,11 @@
   text-align: center;
   border-radius: 10px;
   object-fit: cover;
-  padding-left: 270px;
+  margin-left: auto;
 }
 @media (max-width: 1260px){
-  .student__photo{
-    padding-left: 60px;
+  .student__about{
+    margin-bottom: 30px;
   }
   .student__container-text{
     max-width: 364px;
@@ -90,7 +89,7 @@
   .student__photo{
     width: 255px;
     height: 307px;
-    padding-left: 49px;
+    margin-left: auto;
   }
 }
 @media (max-width: 740px){
@@ -105,6 +104,9 @@
   }
   .student__name{
     padding-top: 35px;
+  }
+  .student__photo{
+    margin-left: 0;
   }
 }
 @media (max-width: 400px){

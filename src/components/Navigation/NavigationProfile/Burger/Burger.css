@@ -90,7 +90,10 @@
     margin-bottom: 15px;
   }
   .burger{
-    width: 100%;
+    transform: translate(0%);
+  }
+  .burger__container{
+    margin: 0 auto;
   }
   .burger__profile-link{
     margin-bottom: 48px;
