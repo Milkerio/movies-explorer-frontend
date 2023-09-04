@@ -1,0 +1,107 @@
+.techs{
+  padding: 100px 70px;
+  background-color: #272727;
+}
+.techs__text-container{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding: 90px 0 100px;
+}
+.techs__text-title{
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 58px;
+  letter-spacing: -2px;
+  margin: 0 0 26px;
+  max-width: 600px;
+}
+.techs__text-subtitle{
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.56px;
+  margin: 0;
+  max-width: 460px;
+}
+.techs__list{
+  display: grid;
+  grid-template-columns: repeat(7, 90px);
+  list-style-type: none;
+  gap: 10px;
+  justify-content: center;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  align-self: center;
+}
+.techs__item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background: #303030;
+  height: 60px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.56px;
+}
+@media (max-width: 850px){
+  .techs__list{
+    grid-template-columns: repeat(7, max(84px));
+  }
+}
+@media (max-width: 800px){
+  .techs{
+    padding: 90px 50px;
+  }
+  .techs__text-container{
+    padding: 80px 0 83px;
+  }
+  .techs__text-title{
+    margin-bottom: 22px;
+  }
+  .techs__text-subtitle{
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: -0.48px;
+  }
+  .techs__item{
+    width: 84px;
+    height: 57px;
+    font-size: 12px;
+    letter-spacing: -0.48px;
+  }
+}
+@media (max-width: 696px){
+  .techs__list{
+    grid-template-columns: repeat(2, 86px);
+  }
+}
+@media (max-width: 400px){
+  .techs{
+    padding: 70px 18px;
+  }
+  .techs__text-container{
+    padding: 60px 0 50px;
+  }
+  .techs__text-title{
+    font-size: 30px;
+    letter-spacing: -1.2px;
+    margin-bottom: 24px;
+    line-height: normal;
+  }
+  .techs__text-subtitle{
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: -0.44px;
+  }
+  .techs__list{
+    grid-template-columns: repeat(2, 84px);
+  }
+}

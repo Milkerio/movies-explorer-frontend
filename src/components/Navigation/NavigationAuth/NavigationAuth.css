@@ -1,0 +1,27 @@
+.navigation__reg{
+  color: white;
+  padding-right: 30px;
+}
+.navigation__log{
+  color: black;
+  background-color: #3DDC84;
+  border-radius: 3px;
+  padding: 8px 20px;
+}
+.navigation__link{
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+}
+@media (max-width: 400px){
+  .navigation__link{
+    font-size: 10px;
+  }
+  .navigation__log{
+    padding: 5px 12px;
+  }
+  .navigation__reg{
+    padding-right: 14px;
+  }
+}

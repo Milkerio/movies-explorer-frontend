@@ -1,0 +1,119 @@
+.project{
+  padding: 110px 70px;
+}
+.project__container{
+  display: flex;
+  padding: 70px 0 110px;
+}
+.project__cell{
+  width: 50%;
+  margin-right: 40px;
+}
+.project__cell:last-of-type{
+  margin-right: 0;
+}
+.project__cell-title{
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.8px;
+  margin: 0 0 26px;
+}
+.project__cell-subtitle{
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0;
+}
+.project__weeks{
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+.project__weeks-text{
+  display: flex;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background-color: #303030;
+  height: 36px;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+}
+.project__weeks-text:first-of-type{
+  background-color: #3DDC84;
+  color: #000000;
+}
+.project__weeks-description{
+  color: #8B8B8B;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 17px;
+  text-align: center;
+  margin: 14px 0 0;
+}
+@media (max-width: 800px){
+  .project{
+    padding: 90px 50px;
+  }
+  .project__container{
+    padding-bottom: 93px;
+  }
+  .project__cell{
+    max-width: 319px;
+    margin-left: 30px;
+  }
+  .project__cell:first-of-type{
+    margin: 0;
+  }
+  .project__cell-title{
+    margin-bottom: 22px;
+  }
+  .project__cell-subtitle{
+    line-height: 18px;
+    font-size: 12px;
+  }
+  .project__weeks-description{
+    font-weight: 400;
+  }
+}
+@media (max-width: 400px){
+  .project{
+    padding: 70px 18px;
+  }
+  .project__container{
+    padding: 60px 0;
+    flex-direction: column;
+  }
+  .project__cell{
+    width: 100%;
+    margin-left: 0;
+  }
+  .project__cell-title{
+    font-size: 18px;
+    letter-spacing: -0.72px;
+    margin-bottom: 16px;
+  }
+  .project__cell:first-of-type{
+    margin-bottom: 58px;
+  }
+  .project__cell-subtitle{
+    font-size: 11px;
+    line-height: 16px;
+  }
+  .project__weeks{
+    grid-template-columns: 1fr 2fr;
+  }
+  .project__weeks-text{
+    font-size: 11px;
+  }
+  .project__weeks-description{
+    font-size: 11px;
+    line-height: normal;
+    margin-top: 10px;
+  }
+}
