@@ -9,7 +9,7 @@ function MoviesCard({ movie, onSave, onDelete, savedMovies, allMovies}) {
   const [buttonText, setButtonText] = useState('');
   useEffect(() => {
     if(location.pathname === '/saved-movies'){
-      setButtonText('×')
+      setButtonText('х')
     }
     else if(isSavedCheck()){
       setButtonText('')
@@ -20,7 +20,7 @@ function MoviesCard({ movie, onSave, onDelete, savedMovies, allMovies}) {
   },[isSavedCheck])
   useEffect(() => {
     if(location.pathname === '/saved-movies'){
-      setButtonText('×');
+      setButtonText('х');
     } else if (location.pathname === '/movies'){
       setButtonText(!isSavedCheck() ? 'Сохранить' : '');
     }
