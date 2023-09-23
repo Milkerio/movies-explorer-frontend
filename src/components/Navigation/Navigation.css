@@ -5,6 +5,10 @@
   max-height: 38px;
   padding: 21px 70px;
 }
+.navigation_margin{
+  margin: 0 auto;
+  max-width: 1140px;
+}
 .navigation__container{
   display: flex;
   align-items: center;

@@ -1,14 +1,29 @@
 import './SearchForm.css';
-import { useState } from "react";
+import { useEffect } from "react";
 import '../../Button/Button.css';
+import useFormWithValidation from '../../../Validation/Validation';
 
-function SearchForm() {
-  const [checkbox, setCheckbox] = useState(false);
+function SearchForm({ search, setSearch, checkboxState, checkboxClick }) {
+  const { values, handleChange, resetForm } = useFormWithValidation();
+  function handleSearch(evt){
+    evt.preventDefault();
+    setSearch(values.movieName);
+  }
+  useEffect(() => {
+    resetForm({ movieName: search })
+  }, [search])
   return(
     <section className="movies__search">
-      <form className="movies__search-form">
-        <input className="movies__search-form-input" placeholder='Фильм' required />
-        <button className="button movies__search-form-button" type='button'>
+      <form className="movies__search-form" onSubmit={handleSearch} noValidate>
+        <input 
+          className="movies__search-form-input" 
+          placeholder='Фильм' 
+          required 
+          name='movieName'
+          value={values.movieName || ''}
+          onChange={handleChange}
+        />
+        <button className="button movies__search-form-button" type='submit'>
           Поиск
         </button>
       </form>
@@ -17,8 +32,8 @@ function SearchForm() {
           className="movies__checkbox"
           required
           type='checkbox'
-          checked={checkbox}
-          onChange={() => { setCheckbox(!checkbox) }}
+          onChange={(evt) => checkboxClick(evt.target.checked)}
+          checked={checkboxState}
         />
         <label className="movies__checkbox-text">Короткометражки</label>
       </div>
