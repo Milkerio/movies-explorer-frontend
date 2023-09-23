@@ -4,12 +4,12 @@ import '../../Button/Button.css';
 import { useLocation } from 'react-router-dom';
 import movieDuration from "../../../utils/movieDuration";
 
-function MoviesCard({ movie, onSave, onDelete, savedMovies, allMovies}) {
+function MoviesCard({ movie, onSave, onDelete, savedMovies}) {
   const location = useLocation();
   const [buttonText, setButtonText] = useState('');
   useEffect(() => {
     if(location.pathname === '/saved-movies'){
-      setButtonText('×')
+      setButtonText('x')
     }
     else if(isSavedCheck()){
       setButtonText('')
@@ -20,7 +20,7 @@ function MoviesCard({ movie, onSave, onDelete, savedMovies, allMovies}) {
   },[isSavedCheck])
   useEffect(() => {
     if(location.pathname === '/saved-movies'){
-      setButtonText('×');
+      setButtonText('x');
     } else if (location.pathname === '/movies'){
       setButtonText(!isSavedCheck() ? 'Сохранить' : '');
     }
@@ -56,7 +56,6 @@ function MoviesCard({ movie, onSave, onDelete, savedMovies, allMovies}) {
   };
   
   const isSavedPage = (location.pathname === '/saved-movies' ? 'button movie__button' : `button movie__button movie__button_like`);
-  //const buttonText = (isSavedPage  ? '×' : isLiked ? '' : 'Сохранить');
   const likeMovieButton = (isSavedCheck() ? isSavedPage : 'button movie__button');
   const {nameRU, image, duration, trailerLink} = movie;
   const reworkedDuration = movieDuration(duration);
