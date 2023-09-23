@@ -8,7 +8,10 @@ function MoviesCard({ movie, onSave, onDelete, savedMovies, allMovies}) {
   const location = useLocation();
   const [buttonText, setButtonText] = useState('');
   useEffect(() => {
-    if(isSavedCheck()){
+    if(location.pathname === '/saved-movies'){
+      setButtonText('×')
+    }
+    else if(isSavedCheck()){
       setButtonText('')
     }
     else{
