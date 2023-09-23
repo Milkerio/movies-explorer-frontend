@@ -65,6 +65,12 @@
   background-repeat: no-repeat;
   object-fit: cover;
 }
+.movie__button_dislike{
+  background-image: url(../../../images/cross.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
 @media (max-width: 800px){
   .movie__info{
     gap: 12px;

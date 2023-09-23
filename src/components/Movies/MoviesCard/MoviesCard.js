@@ -8,10 +8,7 @@ function MoviesCard({ movie, onSave, onDelete, savedMovies}) {
   const location = useLocation();
   const [buttonText, setButtonText] = useState('');
   useEffect(() => {
-    if(location.pathname === '/saved-movies'){
-      setButtonText('x')
-    }
-    else if(isSavedCheck()){
+    if(isSavedCheck()){
       setButtonText('')
     }
     else{
@@ -20,7 +17,7 @@ function MoviesCard({ movie, onSave, onDelete, savedMovies}) {
   },[isSavedCheck])
   useEffect(() => {
     if(location.pathname === '/saved-movies'){
-      setButtonText('x');
+      setButtonText('');
     } else if (location.pathname === '/movies'){
       setButtonText(!isSavedCheck() ? 'Сохранить' : '');
     }
@@ -55,7 +52,7 @@ function MoviesCard({ movie, onSave, onDelete, savedMovies}) {
     }
   };
   
-  const isSavedPage = (location.pathname === '/saved-movies' ? 'button movie__button' : `button movie__button movie__button_like`);
+  const isSavedPage = (location.pathname === '/saved-movies' ? 'button movie__button movie__button_dislike' : `button movie__button movie__button_like`);
   const likeMovieButton = (isSavedCheck() ? isSavedPage : 'button movie__button');
   const {nameRU, image, duration, trailerLink} = movie;
   const reworkedDuration = movieDuration(duration);
