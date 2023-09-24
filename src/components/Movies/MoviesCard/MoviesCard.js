@@ -7,6 +7,7 @@ import movieDuration from "../../../utils/movieDuration";
 function MoviesCard({ movie, onSave, onDelete, savedMovies}) {
   const location = useLocation();
   const [buttonText, setButtonText] = useState('');
+
   useEffect(() => {
     if(isSavedCheck()){
       setButtonText('')

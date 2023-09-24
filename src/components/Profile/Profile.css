@@ -58,13 +58,21 @@
 .profile__input:focus::placeholder{
   opacity: 0;
 }
+.profile__text{
+  text-align: center;
+  color:#EE3465;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
 .profile__buttons{
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   margin: 0 auto;
-  padding-top: 220px;
+  padding-top: 212px;
 }
 .profile__button-submit{
   font-size: 13px;
@@ -80,6 +88,7 @@
 .profile__button-submit:disabled{
   cursor: default;
   opacity: 1;
+  color: gray;
 }
 .profile__button-exit{
   color: #EE3465;

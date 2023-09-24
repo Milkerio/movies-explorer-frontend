@@ -3,7 +3,6 @@ import './MoviesCardList.css';
 //import { cards, saveCards } from "../../utils/cards";
 import MoviesCard from "../MoviesCard/MoviesCard";
 import Preloader from '../Preloader/Preloader';
-import { useEffect } from "react";
 
 function MoviesCardList({movies, onSave, onDelete, savedMovies, moviesCount, isLoading, isSaved, allMovies}) {
   const location = useLocation();

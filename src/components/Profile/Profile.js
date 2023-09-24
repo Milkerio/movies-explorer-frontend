@@ -6,8 +6,8 @@ import '../Button/Button.css';
 import useFormWithValidation from '../../Validation/Validation';
 import { CurrentUserContext } from '../../contexts/CurrentUserContext';
 
-const Profile = ({ isLoading, signout, onUpdateInfo }) => {
-  const { values, handleChange, errors, isValid, resetForm } = useFormWithValidation();
+const Profile = ({ signout, onUpdateInfo, profileMessage }) => {
+  const { values, handleChange,  isValid, resetForm } = useFormWithValidation();
   const currentUser = useContext(CurrentUserContext);
   const { name, email } = values;
   const [isDisabled, setIsDisabled] = useState(false);
@@ -31,7 +31,7 @@ const Profile = ({ isLoading, signout, onUpdateInfo }) => {
       <main>
         <section className='profile'>
           <div className='profile__container'>
-            <h1 className='profile__title'>Привет, {name}!</h1>
+            <h1 className='profile__title'>Привет, {currentUser.name}!</h1>
             <form className='profile__form' onSubmit={handleSubmit}>
               <div className='profile__input-container'>
                 <p className='profile__input-text'>Имя</p>
@@ -58,6 +58,7 @@ const Profile = ({ isLoading, signout, onUpdateInfo }) => {
                 />
               </div>
               <div className='profile__buttons'>
+                <span className='profile__text'>{profileMessage}</span>
                 <button className='button profile__button-submit' type='submit' disabled={!isValid || !isDisabled}>
                   Редактировать
                 </button>

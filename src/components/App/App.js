@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { CurrentUserContext } from '../../contexts/CurrentUserContext';
 import Main from '../Main/Main';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Navigate } from 'react-router-dom';
 import Footer from '../Footer/Footer';
 import Register from '../Register/Register';
 import Login from '../Login/Login';
@@ -23,6 +23,8 @@ function App() {
   const [savedMovies, setSavedMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [allMovies, setAllMovies] = useState([]);
+  const [profileMessage, setProfileMessage] = useState('');
+  const [formMessage, setFormMessage] = useState('');
 
   const navigate = useNavigate();
   useEffect(() => {
@@ -58,8 +60,12 @@ function App() {
     authUser.register(name, email, password)
       .then((res) => {
         loginUser(email, password);
+        
       })
-      .catch((err) => console.log(err))
+      .catch((err) => {
+        console.log(err);
+        setFormMessage(err.message);
+      })
       .finally(() => setIsLoading(false))
   };
   function loginUser(email, password) {
@@ -71,7 +77,10 @@ function App() {
         navigate('/movies', {replace: true});
         localStorage.setItem('loggedIn', true);
       })
-      .catch((err) => console.log(err))
+      .catch((err) => {
+        console.log(err);
+        setFormMessage(err.message);
+      })
       .finally(() => setIsLoading(false))
   };
   function updateUser(data) {
@@ -79,9 +88,13 @@ function App() {
     apiMain
       .setUserInfo(data)
       .then((res) => {
-        setCurrentUser(res)
+        setCurrentUser(res);
+        setProfileMessage('Данные успешно обновлены!')
       })
-      .catch((err) => console.log(err))
+      .catch((err) => {
+        console.log(err);
+        setProfileMessage('Ошибка! Проверьте валидность данных!')
+      })
       .finally(() => setIsLoading(false))
   }
   function getAllMovies() {
@@ -147,14 +160,28 @@ function App() {
     <CurrentUserContext.Provider value={currentUser}>
       <div className='page'>
         <Routes>
-          <Route
+          { !loggedIn ? (
+            <Route
             path='/signin'
-            element={<Login isLoading={isLoading} onLog={loginUser} />}
+            element={<Login isLoading={isLoading} onLog={loginUser} formMessage={formMessage} />}
           />
-          <Route
+          ) : (
+            <Route 
+              path='/signin'
+              element={<Navigate to='/' />}
+            />
+          )}
+          { !loggedIn ? (
+            <Route
             path='/signup'
-            element={<Register isLoading={isLoading} onReg={registerUser} />}
+            element={<Register isLoading={isLoading} onReg={registerUser} formMessage={formMessage} />}
           />
+          ) : (
+            <Route 
+              path='/signup'
+              element={<Navigate to='/' />}
+            />
+          )}
           <Route
               path='*'
               element={<PageNotFound />}
@@ -199,6 +226,7 @@ function App() {
                 isLoading={isLoading}
                 signout={signout}
                 onUpdateInfo={updateUser}
+                profileMessage={profileMessage}
               />
             }
           />

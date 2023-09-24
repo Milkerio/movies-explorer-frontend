@@ -4,7 +4,7 @@ import logo from '../../images/logo.svg';
 import '../Button/Button.css';
 import useFormWithValidation from '../../Validation/Validation';
 
-function Form({ title, children, buttonText, spanText, linkText, linkPath, isValid, onSubmit }) {
+function Form({ title, children, buttonText, spanText, linkText, linkPath, isValid, onSubmit, isLoading, formMessage }) {
   const location = useLocation();
   const { errors } = useFormWithValidation();
   return(
@@ -16,8 +16,9 @@ function Form({ title, children, buttonText, spanText, linkText, linkPath, isVal
         {title}
       </h1>
       {children}
+      <span className='form__error'>{formMessage}</span>
       <button 
-        className={`button form__button ${location.pathname === '/signin' ? 'form__button-login' : ''} ${!isValid && errors ? 'form__button_disabled' : ''}`} 
+        className={`button form__button ${location.pathname === '/signin' ? 'form__button-login' : ''} ${(!isValid && errors) || isLoading ? 'form__button_disabled' : ''}`} 
         type='submit'
         disabled={!isValid}
       >

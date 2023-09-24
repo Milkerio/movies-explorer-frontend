@@ -3,7 +3,7 @@ import Form from '../Form/Form';
 import useFormWithValidation from '../../Validation/Validation';
 import { useEffect } from 'react';
 
-function Login({ onLog, isLoading}) {
+function Login({ onLog, isLoading, formMessage }) {
   const { values, handleChange, errors, isValid, resetForm } = useFormWithValidation();
   function handleSubmit(evt) {
     evt.preventDefault();
@@ -23,6 +23,8 @@ useEffect(() => {
           linkPath='/signup'
           onSubmit={handleSubmit}
           isValid={isValid}
+          isLoading={isLoading}
+          formMessage={formMessage}
         >
           <label className='form__label'>E-mail</label>
           <input 
@@ -35,6 +37,7 @@ useEffect(() => {
             required 
             value={values.email || ''}
             onChange={handleChange}
+            pattern="^[a-zA-Z0-9_.+\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-.]+$"
           />
           <span className={`form__span ${!isValid && errors.email ? 'form__span_active' : ''}`}>{errors.email || ''}</span>
           <label className='form__label'>Пароль</label>

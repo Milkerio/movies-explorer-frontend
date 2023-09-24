@@ -3,7 +3,7 @@ import Form from '../Form/Form';
 import useFormWithValidation from '../../Validation/Validation';
 import React, { useEffect } from 'react';
 
-function Register({ onReg, isLoading }) {
+function Register({ onReg, isLoading, formMessage }) {
   const { values, handleChange, errors, isValid, resetForm } = useFormWithValidation();
 
   function handleSubmit(evt) {
@@ -24,6 +24,8 @@ function Register({ onReg, isLoading }) {
           linkPath='/signin'
           onSubmit={handleSubmit}
           isValid={isValid}
+          isLoading={isLoading}
+          formMessage={formMessage}
         >
           <label className='form__label'>Имя</label>
           <input 
@@ -51,6 +53,7 @@ function Register({ onReg, isLoading }) {
             required 
             value={values.email || ''}
             onChange={handleChange}
+            pattern="^[a-zA-Z0-9_.+\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-.]+$"
           />
           <span className={`form__span ${!isValid && errors.email ? 'form__span_active' : ''}`}>{errors.email || ''}</span>
           <label className='form__label'>Пароль</label>

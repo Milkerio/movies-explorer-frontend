@@ -16,7 +16,7 @@ function SavedMovies({savedMovies, onSave, onDelete, isSaved, allMovies}) {
   useEffect(() => {
     shortMoviesFilter();
     searchMovies();
-  },[search, checkbox]);
+  },[search, checkbox, savedMovies]);
   function handleSearch(movies, keyword){
     return movies.filter((movie) => {
       const word = keyword.toLowerCase().trim();
@@ -55,7 +55,6 @@ function SavedMovies({savedMovies, onSave, onDelete, isSaved, allMovies}) {
   function handleCheckboxClick(value){
     setCheckbox(value);
   };
-  
   return(
     <>
       <Header />
