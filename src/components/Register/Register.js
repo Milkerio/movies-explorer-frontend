@@ -13,6 +13,9 @@ function Register({ onReg, isLoading, formMessage }) {
   useEffect(() => {
     resetForm();
   }, [resetForm]);
+  useEffect(() => {
+    console.log(isLoading);
+  })
   return(
     <main>
       <section className='register'>
@@ -40,6 +43,7 @@ function Register({ onReg, isLoading, formMessage }) {
             pattern="^[A-Za-zА-Яа-яЁё\-\s]+$"
             value={values.name || ''}
             onChange={handleChange}
+            disabled={isLoading}
           />
           <span className={`form__span ${!isValid && errors.name ? 'form__span_active' : ''}`}>{errors.name || ''}</span>
           <label className='form__label'>E-mail</label>
@@ -53,7 +57,8 @@ function Register({ onReg, isLoading, formMessage }) {
             required 
             value={values.email || ''}
             onChange={handleChange}
-            pattern="^[a-zA-Z0-9_.+\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-.]+$"
+            pattern="[a-zA-Z0-9_.+\-]+@[a-zA-Z0-9\-]+\.[a-z]{2,4}$"
+            disabled={isLoading}
           />
           <span className={`form__span ${!isValid && errors.email ? 'form__span_active' : ''}`}>{errors.email || ''}</span>
           <label className='form__label'>Пароль</label>
@@ -68,6 +73,7 @@ function Register({ onReg, isLoading, formMessage }) {
             required 
             value={values.password || ''}
             onChange={handleChange}
+            disabled={isLoading}
           />
           <span className={`form__span ${!isValid && errors.password ? 'form__span_active' : ''}`}>{errors.password}</span>
         </Form>

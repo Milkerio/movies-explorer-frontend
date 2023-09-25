@@ -3,7 +3,7 @@ import SearchForm from "../Movies/SearchForm/SearchForm";
 import MoviesCardList from "../Movies/MoviesCardList/MoviesCardList";
 import './SavedMovies.css';
 import { useState, useEffect } from "react";
-import { MESSAGE_ERROR, MESSAGE_NOT_FOUND } from "../../utils/messages";
+import { MESSAGE_ERROR, MESSAGE_NOT_FOUND, MOVIE_SHORT_DURATION } from "../../constants/constants";
 
 function SavedMovies({savedMovies, onSave, onDelete, isSaved, allMovies}) {
   const [movies, setMovies] = useState([]);
@@ -46,7 +46,7 @@ function SavedMovies({savedMovies, onSave, onDelete, isSaved, allMovies}) {
   }
   function filterShortMovies(movies) {
     return movies.filter((movie) => {
-      return movie.duration <= 40;
+      return movie.duration <= MOVIE_SHORT_DURATION;
     });
   };
   function shortMoviesFilter(){

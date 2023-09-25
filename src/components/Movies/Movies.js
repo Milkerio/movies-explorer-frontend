@@ -4,7 +4,18 @@ import MoviesCardList from "./MoviesCardList/MoviesCardList";
 import './Movies.css';
 import { useEffect, useState } from "react";
 import useWidth from "../../utils/windowSize";
-import { MESSAGE_NOT_FOUND, MESSAGE_ERROR } from "../../utils/messages";
+import { 
+  MESSAGE_NOT_FOUND, 
+  MESSAGE_ERROR, 
+  MOVIE_CURRENT_12, 
+  MOVIE_CURRENT_8, 
+  MOVIE_CURRENT_5, 
+  MOVIE_NEXT_2, 
+  MOVIE_NEXT_3,
+  MOVIE_SHORT_DURATION,
+  MOVIE_WIDTH_LARGE,
+  MOVIE_WIDTH_SMALL,
+ } from "../../constants/constants";
 
 function Movies({onDelete, onSave, allMovies, savedMovies}) {
   const [movies, setMovies] = useState([]);
@@ -28,12 +39,12 @@ function Movies({onDelete, onSave, allMovies, savedMovies}) {
   }, []);
   
   function resizeWidth(){
-    if(width >= 1050){
-      setNextMovies({current: 12, next: 3})
-    } else if (width < 680){
-      setNextMovies({current: 5, next: 2})
+    if(width >= MOVIE_WIDTH_LARGE){
+      setNextMovies({current: MOVIE_CURRENT_12, next: MOVIE_NEXT_3})
+    } else if (width < MOVIE_WIDTH_SMALL){
+      setNextMovies({current: MOVIE_CURRENT_5, next: MOVIE_NEXT_2})
     } else {
-      setNextMovies({current: 8, next: 2})
+      setNextMovies({current: MOVIE_CURRENT_8, next: MOVIE_NEXT_2})
     }
   };
   function clickMore(){
@@ -92,7 +103,7 @@ function Movies({onDelete, onSave, allMovies, savedMovies}) {
   }
   function filterShortMovies(movies) {
     return movies.filter((movie) => {
-      return movie.duration <= 40;
+      return movie.duration <= MOVIE_SHORT_DURATION;
     });
   }
   function shortMoviesFilter(){
@@ -101,6 +112,11 @@ function Movies({onDelete, onSave, allMovies, savedMovies}) {
   function handleCheckboxClick(value){
     setCheckbox(value);
   }
+  useEffect(() => {
+    if(checkbox){
+      setMovies(shortMovies);
+    }
+  })
   return(
     <>
       <Header />

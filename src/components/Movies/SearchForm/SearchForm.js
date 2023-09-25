@@ -30,7 +30,6 @@ function SearchForm({ search, setSearch, checkboxState, checkboxClick }) {
       <div className="movies__checkbox-container">
         <input
           className="movies__checkbox"
-          required
           type='checkbox'
           onChange={(evt) => checkboxClick(evt.target.checked)}
           checked={checkboxState}

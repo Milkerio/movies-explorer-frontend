@@ -42,7 +42,7 @@ function App() {
           console.log(err);
         })
     }
-  }, [navigate]);
+  }, []);
   useEffect(() => {
     if(loggedIn) {
       Promise.all([apiMain.getUserInfo(),apiMain.getSavedMovies([])])
@@ -54,13 +54,12 @@ function App() {
         console.log(err);
       })
     }
-  }, [loggedIn]);
+  }, []);
   function registerUser(name, email, password) {
     setIsLoading(true);
     authUser.register(name, email, password)
       .then((res) => {
         loginUser(email, password);
-        
       })
       .catch((err) => {
         console.log(err);
@@ -140,7 +139,8 @@ function App() {
     setIsLoading(true);
     apiMain.deleteMovie(_id)
       .then(() => {
-        setSavedMovies(savedMovies.filter((c) => c._id !== _id));
+        const newArray = savedMovies.filter((c) => c._id !== _id);
+        setSavedMovies(newArray);
       })
       .catch((err) => {
         console.log(err);

@@ -8,7 +8,7 @@ function Form({ title, children, buttonText, spanText, linkText, linkPath, isVal
   const location = useLocation();
   const { errors } = useFormWithValidation();
   return(
-    <form className="form" onSubmit={onSubmit} noValidate>
+    <form className="form" onSubmit={onSubmit} noValidate >
       <Link className='form__link' to={'/'}>
         <img src={logo} alt='Логотип' className='form__logo' />
       </Link>
@@ -20,7 +20,7 @@ function Form({ title, children, buttonText, spanText, linkText, linkPath, isVal
       <button 
         className={`button form__button ${location.pathname === '/signin' ? 'form__button-login' : ''} ${(!isValid && errors) || isLoading ? 'form__button_disabled' : ''}`} 
         type='submit'
-        disabled={!isValid}
+        disabled={!isValid || isLoading}
       >
         {buttonText}
       </button>

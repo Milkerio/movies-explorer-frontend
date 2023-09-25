@@ -6,7 +6,7 @@ import '../Button/Button.css';
 import useFormWithValidation from '../../Validation/Validation';
 import { CurrentUserContext } from '../../contexts/CurrentUserContext';
 
-const Profile = ({ signout, onUpdateInfo, profileMessage }) => {
+const Profile = ({ signout, onUpdateInfo, profileMessage, isLoading }) => {
   const { values, handleChange,  isValid, resetForm } = useFormWithValidation();
   const currentUser = useContext(CurrentUserContext);
   const { name, email } = values;
@@ -44,6 +44,7 @@ const Profile = ({ signout, onUpdateInfo, profileMessage }) => {
                   onChange={handleChange}
                   minLength='2'
                   maxLength='30'
+                  disabled={isLoading}
                 />
               </div>
               <div className='profile__input-container'>
@@ -55,6 +56,8 @@ const Profile = ({ signout, onUpdateInfo, profileMessage }) => {
                   placeholder={email}
                   value={values.email || ''}
                   onChange={handleChange}
+                  pattern="[a-zA-Z0-9_.+\-]+@[a-zA-Z0-9\-]+\.[a-z]{1,4}$"
+                  disabled={isLoading}
                 />
               </div>
               <div className='profile__buttons'>
