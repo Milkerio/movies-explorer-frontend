@@ -54,7 +54,7 @@ function App() {
         console.log(err);
       })
     }
-  }, []);
+  }, [loggedIn]);
   function registerUser(name, email, password) {
     setIsLoading(true);
     authUser.register(name, email, password)

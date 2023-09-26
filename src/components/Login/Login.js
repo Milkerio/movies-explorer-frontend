@@ -37,7 +37,7 @@ useEffect(() => {
             required 
             value={values.email || ''}
             onChange={handleChange}
-            pattern="[a-zA-Z0-9_.+\-]+@[a-zA-Z0-9\-]+\.[a-z]{1,4}$"
+            pattern="[a-zA-Z0-9_.+\-]+@[a-zA-Z0-9\-]+\.[a-z]{2,4}$"
             disabled={isLoading}
           />
           <span className={`form__span ${!isValid && errors.email ? 'form__span_active' : ''}`}>{errors.email || ''}</span>
