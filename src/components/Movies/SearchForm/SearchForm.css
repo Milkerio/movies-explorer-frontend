@@ -1,8 +1,7 @@
 .movies__search{
-  padding: 70px 0 10px;
+  padding: 70px 0px;
   display: flex;
   flex-direction: column;
-  width: 100%;
 }
 .movies__search-form{
   display: flex;

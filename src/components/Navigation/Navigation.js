@@ -9,16 +9,17 @@ function Navigation() {
   const location = useLocation();
   const navigation_padding = (
     location.pathname === '/movies' ? 'navigation_padding' : ''
-  )
+  );
   return(
     <nav className={`navigation ${navigation_padding}`}>
       <Link to='/'>
         <img className='button navigation__logo' src={logo} alt="Логотип сайта" />
       </Link>
       <div className='navigation__container'>
-        {location.pathname === '/' ? <NavigationAuth /> : <NavigationProfile />}
+        {localStorage.getItem('loggedIn') === 'true' ? <NavigationProfile /> : <NavigationAuth />}
       </div>
     </nav>
   )
 }
+
 export default Navigation;

@@ -15,6 +15,18 @@
   padding: 0;
   margin-top: 50px;
 }
+.movies__message{
+  display: none;
+}
+.movies__message_active{
+  display: block;
+  margin: 0 auto;
+  font-size: 30px;
+  font-weight: 300;
+  opacity: .4;
+  font-style: italic;
+  width: max-content;
+}
 @media (max-width: 900px){
   .movies{
     padding: 0 30px 80px;
