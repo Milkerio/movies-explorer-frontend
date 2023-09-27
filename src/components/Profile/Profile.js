@@ -62,7 +62,7 @@ const Profile = ({ signout, onUpdateInfo, profileMessage, isLoading }) => {
               </div>
               <div className='profile__buttons'>
                 <span className='profile__text'>{profileMessage}</span>
-                <button className='button profile__button-submit' type='submit' disabled={!isValid || !isDisabled}>
+                <button className='button profile__button-submit' type='submit' disabled={!isValid || !isDisabled || isLoading}>
                   Редактировать
                 </button>
                 <Link className='button profile__button-exit' onClick={signout}>
